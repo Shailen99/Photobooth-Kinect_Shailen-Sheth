@@ -26,6 +26,9 @@ void setup()
 }
 void draw()
 {
+  tracker.track();
+  tracker.display();
+
   PImage img3 = kinect.getVideoImage();
   image(img3, 0, 0);
   rect(x, y, w, h);
