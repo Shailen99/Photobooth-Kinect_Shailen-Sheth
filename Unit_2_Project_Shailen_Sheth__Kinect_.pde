@@ -3,6 +3,7 @@ import org.openkinect.freenect2.*;
 import org.openkinect.processing.*;
 import org.openkinect.tests.*;
 Kinect kinect;
+KinectTracker tracker;
 //(filter 1: Depth Image)
 int x = 700;
 int y = 0;
@@ -17,6 +18,7 @@ color Purple =  color(148, 0, 211);
 color Blue = color(42, 94, 178);
 void setup()
 {
+  tracker = new KinectTracker();
   fullScreen(P3D);
   kinect = new Kinect(this);
   kinect.initDepth();
