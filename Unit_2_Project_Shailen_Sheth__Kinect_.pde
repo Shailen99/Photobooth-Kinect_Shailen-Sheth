@@ -8,8 +8,8 @@ Kinect kinect;
 
 
 void setup() {
-  size(640, 520);
-  kinect = new Kinect(this);
+fullScreen();
+kinect = new Kinect(this);
   tracker = new KinectTracker();
 }
 
@@ -32,8 +32,7 @@ void draw() {
   fill(100, 250, 50, 200);
   noStroke();
   ellipse(v2.x, v2.y, 20, 20);
-
-
+  if...
 }
 /*
 //(filter 1: Depth Image)
