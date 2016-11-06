@@ -18,8 +18,6 @@
     PImage display;
 
     KinectTracker() {
-      // This is an awkard use of a global variable here
-      // But doing it this way for simplicity
       kinect.initDepth();
       kinect.enableMirror(true);
       // Make a blank image
@@ -96,9 +94,9 @@
         }
       }
       display.updatePixels();
-
-      // Draw the image
-      image(display, 0, 0);
+PImage img4 = display.copy();
+img4.resize(width,height);
+      image(img4, 0, 0);
     }
 
     int getThreshold() {
